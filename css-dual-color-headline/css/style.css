@@ -1,0 +1,38 @@
+body {
+	font-family: Montserrat, sans-serif;
+}
+.row {
+	margin-bottom: 30px;
+}
+.dual-header {
+	display: block;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.dual-header .title,
+.dual-header .title span {
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 48px;
+	margin: 10px 0px;
+}
+.dual-header .subtext {
+	font-size: 16px;
+	display: block;
+}
+.dual-header i {
+	display: block;
+	padding: 0px;
+	margin: 20px 0px 10px 0px;
+	font-size: 36px;
+}
+.dual-header.dh-basic .title span.lead {
+	font-weight: 300;
+}
+.dual-header.dh-colored .title span.lead {
+	color: #1abc9c;
+}
+.dual-header.dh-colored-reverse .title span.lead {
+	color: #1abc9c;
+}

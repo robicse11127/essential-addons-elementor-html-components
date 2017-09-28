@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Flip Box</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header">
+					<h2>Flipbox Examples</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="vertical-flip flip-left">
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Flip Right to Left</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="vertical-flip flip-right">
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Flip Left to Right</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+		<!-- Horizontal Flip -->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="horizontal-flip flip-bottom">
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Flip Top to Bottom</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="horizontal-flip flip-top">
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Flip Bottom to Top</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+		<!-- Horizontal Card Flip -->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="horizontal-flip-card flip-bottom">
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Card Flip Top to Bottom</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="horizontal-flip-card flip-top">
+			  		<div class="front">
+			  			<div class="content">
+			  				<i class="fa fa-snowflake-o"></i>
+			    			<h4 class="title">Flip Bottom to Top</h4>
+			    			<p>This is front-end content.</p>
+			  			</div>
+			  		</div>
+			  		<div class="back">
+			    		<div class="content">
+			    			<h4 class="title">Back Side Content</h4>
+			    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum beatae illo omnis earum fuga recusandae nulla!</p>
+			    		</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".vertical-flip").hover( function() {
+  				$(this).addClass( 'flip' );
+  			}, function() {
+  				$(this).removeClass( 'flip' );
+  			} );
+
+  			$(".horizontal-flip").hover( function() {
+  				$(this).addClass( 'flip' );
+  			}, function() {
+  				$(this).removeClass( 'flip' );
+  			} );
+
+  			$(".horizontal-flip-card").hover( function() {
+  				$(this).addClass( 'flip' );
+  			}, function() {
+  				$(this).removeClass( 'flip' );
+  			} );
+		});
+	</script>
+</body>
+</html>

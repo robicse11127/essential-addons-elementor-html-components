@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Checkbox</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="bicon/css/bicon.min.css">
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			margin: 0px;
+			padding: 100px;
+		}
+		.custom-checkbox-1:not(:checked),
+		.custom-checkbox-1:checked {
+			display: none;
+		}
+		.custom-checkbox-1 + span {
+			display: inline-block;
+			position: relative;
+			z-index: 0;
+			padding-left: 35px;
+			padding-right: 20px;
+			cursor: pointer;
+		}
+		.custom-checkbox-1:not(:checked) + span:before {
+			position: absolute;
+			content: "";
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			border: 1px solid #ccc;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			background: #e0e0e0;
+			transition: .3s;
+		}
+		.custom-checkbox-1:checked + span:before {
+			position: absolute;
+			content: "";
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			border: 1px solid #009688;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			background: #009688;
+			animation: popup .3s linear;
+			/*box-shadow: inset 1px -1px 10px 2px rgba( 0,0,0,0.1 );*/
+		}
+		/* Checkbox Style 2 */
+		.custom-checkbox-2:not(:checked),
+		.custom-checkbox-2:checked {
+			display: none;
+		}
+		.custom-checkbox-2 + span {
+			display: inline-block;
+			position: relative;
+			z-index: 0;
+			padding-left: 35px;
+			padding-right: 20px;
+			cursor: pointer;
+		}
+		.custom-checkbox-2:not(:checked) + span:before {
+			position: absolute;
+			content: "";
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			background: #e0e0e0;
+			transition: .3s;
+		}
+		.custom-checkbox-2:checked + span:before {
+			position: absolute;
+			content: "";
+			background-image: url( 'check-sqr.png' );
+			background-repeat: no-repeat;
+			background-size: 25px 25px;
+			background-position: center;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			animation: popup .3s linear;
+		}
+		/* Checkbox Style 3 */
+		.custom-checkbox-3:not(:checked),
+		.custom-checkbox-3:checked {
+			display: none;
+		}
+		.custom-checkbox-3 + span {
+			display: inline-block;
+			position: relative;
+			z-index: 0;
+			padding-left: 35px;
+			padding-right: 20px;
+			cursor: pointer;
+		}
+		.custom-checkbox-3:not(:checked) + span:before {
+			position: absolute;
+			content: "";
+			width: 25px;
+			height: 25px;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			background: #e0e0e0;
+			transition: .3s;
+		}
+		.custom-checkbox-3:checked + span:before {
+			position: absolute;
+			content: "";
+			background-image: url( 'check-sqr.png' );
+			background-repeat: no-repeat;
+			background-size: 25px 25px;
+			background-position: center;
+			width: 25px;
+			height: 25px;
+			z-index: 1;
+			top: -5px;
+			left: 0px;
+			animation: popup .3s linear;
+		}
+		/* Checkbox Style 4 */
+		.custom-checkbox-4:not(:checked),
+		.custom-checkbox-4:checked {
+			display: none;
+		}
+		.custom-checkbox-4 + span {
+			display: inline-block;
+			position: relative;
+			z-index: 0;
+			background: #009688;
+			padding: 25px 60px;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			color: #fff;
+			cursor: pointer;
+			margin-right: 20px;
+			border-radius: 3px;
+			font-size: 20px;
+		}
+		.custom-checkbox-4:not(:checked) + span {
+			background: #ccc;
+			border: 1px solid #ccc;
+			color: #444;
+			transition: .3s;
+		}
+		.custom-checkbox-4:checked + span {
+			background: #009688;
+			border: 1px solid #009688;
+			transition: .3s;
+		}
+		.bi {
+			font-weight: 500;
+			font-size: 20px;
+			margin-right: 5px;
+		}
+		@keyframes popup {
+			0% {
+				transform: scale( 0 );
+			}
+			90% {
+				transform: scale( 1.2 );
+			}
+			100% {
+				transform: scale( 1.0 );
+			}
+		}
+	</style>
+</head>
+<body>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-1"> <span>Custom Checkbox</span>	
+	</label>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-1"> <span>Custom Checkbox</span>	
+	</label>
+	<br> <br> <br>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-2"> <span>Custom Checkbox</span>	
+	</label>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-2"> <span>Custom Checkbox</span>	
+	</label>
+	<br> <br> <br>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-3"> <span>Custom Checkbox</span>	
+	</label>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-3"> <span>Custom Checkbox</span>	
+	</label>
+
+	<br> <br> <br>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-4"> <span><i class="bi bi-tick" ></i> Custom Checkbox</span>	
+	</label>
+	<label>
+		<input type="checkbox" name="checkbox" class="custom-checkbox-4"> <span>Custom Checkbox</span>	
+	</label>
+</body>
+</html>
