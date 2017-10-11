@@ -1,36 +1,21 @@
 (function($) {
-	"use strict";
-	var interactiveCard = $( '.interactive-card' );
-	var phoneMockup = $( '.interactive-card .phone-mockup' );
-	var phoneScreen = $( '.interactive-card .phone-mockup .phone-screen' );
-	var contentShow = $( '.interactive-card .content' );
-	var closeMe		= $( '#close-me' );
 
-	// Interactive phone screen
-	// function interactivePhoneScreen( options ) {
-	// 	''
+	// var options = {
+	// 	containerClass: 'interactive-card',
+	// 	screenAnimation: {
+	// 		start: 'fade-out',
+	// 		end: 'fade-in'
+	// 	},
+	// 	mockupAnimation: {
+	// 		start: 'zoom-out',
+	// 		end: 'zoom-in'
+	// 	},
+	// 	contentAnimation: 'slide-in-swing-left',
+	// 	shadow: true,
+	// 	revealTime: 400
 	// }
-	phoneScreen.on( 'click', function() {
-		$(this).removeClass( 'fade-in' ).addClass( 'fade-out' );
-		setTimeout( function() {
-			phoneMockup.removeClass( 'zoom-in' ).addClass( 'zoom-out' );
-			setTimeout( function() {
-				contentShow.addClass( 'content-show' );
-				interactiveCard.addClass( 'add-shadow' );
-			}, 800 );
-		}, 400 );
-	} );
+	// var init = new interactiveCards( options );
 
-	closeMe.on( 'click', function() {
-		interactiveCard.removeClass( 'add-shadow' );
-		contentShow.removeClass( 'content-show' );
-		setTimeout( function() {
-			phoneMockup.removeClass( 'zoom-out' ).addClass( 'zoom-in' );
-			setTimeout( function() {
-				phoneScreen.removeClass( 'fade-out' ).addClass( 'fade-in' );
-			}, 800 );
-		},400 );
-	} );
 
 })(jQuery);
 

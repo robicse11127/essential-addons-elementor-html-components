@@ -21,7 +21,7 @@ body {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	background: url("images/overlay.png"),linear-gradient(45deg, #6E436C 25%, #2A4584 75%);
+	background: linear-gradient(45deg, #6E436C 25%, #2A4584 75%);
 }
 .add-shadow {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

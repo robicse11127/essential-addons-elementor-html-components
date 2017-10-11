@@ -13,8 +13,8 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="interactive-card">
+			<div class="col-md-6">
+				<div id="interactive-card-1" class="interactive-card">
 					<div class="phone-mockup">
 						<div class="phone-screen">
 							<div class="phone-screen-overlay"></div>
@@ -22,7 +22,28 @@
 					</div>
 					<div class="content">
 						<div class="image">
-							<span class="close close-me" id="close-me"><i class="fa fa-times"></i></span>
+							<span class="close close-me"><i class="fa fa-times"></i></span>
+						</div>
+						<div class="text center-text">
+							<div class="text-inner">
+								<h2 class="title">Jane Anderson</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sint quis officiis, aspernatur atque harum in.</p>
+								<a href="#" class="interactive-btn">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="interactive-card-2" class="interactive-card">
+					<div class="phone-mockup">
+						<div class="phone-screen">
+							<div class="phone-screen-overlay"></div>
+						</div>
+					</div>
+					<div class="content">
+						<div class="image">
+							<span class="close close-me"><i class="fa fa-times"></i></span>
 						</div>
 						<div class="text center-text">
 							<div class="text-inner">
@@ -39,6 +60,42 @@
 
 	<!-- Scripts -->
 	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/interactive-cards.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			var options = {
+				containerClass: 'interactive-card-1',
+				screenAnimation: {
+					start: 'fade-out',
+					end: 'fade-in'
+				},
+				mockupAnimation: {
+					start: 'zoom-out',
+					end: 'zoom-in'
+				},
+				contentAnimation: 'slide-in-left',
+				shadow: true,
+				revealTime: 400
+			}
+			interactiveCards( options );
+
+			var options2 = {
+				containerClass: 'interactive-card-2',
+				screenAnimation: {
+					start: 'fade-out',
+					end: 'fade-in'
+				},
+				mockupAnimation: {
+					start: 'zoom-out',
+					end: 'zoom-in'
+				},
+				contentAnimation: 'slide-in-right',
+				shadow: true,
+				revealTime: 400
+			}
+			interactiveCards( options2 );
+		});
+	</script>
 </body>
 </html>
