@@ -1,0 +1,36 @@
+.body {
+	padding-top: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+/**
+ * Basic Carousel
+ */
+.carousel-container {
+	overflow: hidden;
+}
+.carousel {
+	padding: 0px;
+	margin: 0px;
+	/*width: 2400px;*/
+	list-style: none;
+}
+.carousel li {
+	float: left;
+}
+.carousel li img {
+	max-width: 100%;
+}
+
+.navigation {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.navigation a {
+	display: inline-block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #4d4d4d;
+	font-weight: 600;
+}

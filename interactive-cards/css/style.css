@@ -5,6 +5,15 @@ body {
 	line-height: 27px;
 	color: #4d4d4d;
 }
+.row {
+	margin-bottom: 30px;
+}
+img {
+	max-width: 100%;
+}
+img.align-center {
+	margin-bottom: 20px;
+}
 /**
  * Interactive Cards
  */
@@ -12,6 +21,7 @@ body {
 	position: relative;
 	width: 100%;
 	min-height: 600px;
+	height: 600px;
 	display: block;
 	z-index: 0;
 	overflow: hidden;
@@ -21,24 +31,27 @@ body {
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
+	background: -webkit-linear-gradient(45deg, #6E436C 25%, #2A4584 75%);
 	background: linear-gradient(45deg, #6E436C 25%, #2A4584 75%);
 }
 .add-shadow {
+	-webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.green-card {
-	background: #69F0AE;
 }
 .phone-mockup {
 	position: relative;
-	width: 260px;
-	height: 480px;
+	display: block;
+	max-width: 260px;
+	max-height: 480px;
+	width: 46.48%;
+	height: 80%;
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	z-index: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 	background: url( '../img/overlay.png' ) rgba( 255,255,255,0.4 );
+	-webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .phone-mockup:before {
@@ -73,14 +86,11 @@ body {
 	z-index: 11;
 	cursor: pointer;
 	margin-top: 39px;
-	background-image: url('../img/app-screen.jpg');
+	/*background-image: url('../img/app-screen-1.png');*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
 	transition: .5s;
-}
-.phone-screen-overlay {
-	position: 
 }
 .phone-screen:before {
 	content: "";
@@ -122,6 +132,9 @@ body {
 	z-index: -100;
 	opacity: 0;
 	transition: 1s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 }
 .content-show {
@@ -130,20 +143,26 @@ body {
 }
 .content .image {
 	width: 100%;
-	height: 55%;
+	height: 100%;
 	overflow: hidden;
 	background-image: url( '../img/card-lg.jpg' );
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	opacity: 0.7;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 .content .image img {
 	max-height: 100%;
 }
+.content:hover .image {
+	opacity: 1;
+}
 .content .text {
 	width: 100%;
-	height: 45%;
-	padding: 15px 30px;
+	height: 100%;
+	padding: 20px;
 	font-size: 14px;
 	line-height: 27px;
 	display: flex;
@@ -161,6 +180,18 @@ body {
 	color: #313131;
 	margin-top: 0px;
 }
+.content iframe {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+}
+.content .content-overflow {
+	width: 100%;
+	height: 100%;
+	background: #f1f1f1;
+	padding: 30px;
+	overflow-y: scroll;
+}
 .close-me {
 	position: absolute;
 	width: 40px;
@@ -175,7 +206,7 @@ body {
 }
 .interactive-btn {
 	display: inline-block;
-    padding: 12px 25px;
+    padding: 8px 25px;
     background: #e9e9e9;
     color: #fff;
     border-radius: 4px;
@@ -187,6 +218,70 @@ body {
     text-decoration: none;
     background:#C2185B; 
 }
+
+/**
+ * Basic Carousel
+ */
+.interactive-card .carousel-container {
+	overflow: hidden;
+}
+.interactive-card .carousel {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.interactive-card .carousel li {
+	float: left;
+}
+.interactive-card .carousel li img {
+	max-width: 100%;
+}
+
+.interactive-card .navigation {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+	bottom: 15px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	z-index: 10;
+}
+.interactive-card .navigation a {
+	display: inline-block;
+	padding: 8px 15px;
+	background: #f9f9f9;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #4d4d4d;
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.interactive-card .navigation a:hover {
+	background: #ededed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Animation Classes */
 .fade-out {
 	-webkit-animation: fadeOut .5s;
